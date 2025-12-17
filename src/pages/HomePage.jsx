@@ -1,11 +1,16 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+
+import { Header } from "../components";
 
 const HomePage = () => {
   return (
-    <Box sx={{ width: "100%", maxWidth: "full" }}>
-      <Typography variant="h1">howdy</Typography>
-    </Box>
+    <Grid
+      container
+      sx={{ width: "100%", maxWidth: "full", margin: 0, padding: 0 }}
+    >
+      <Header />
+      <Typography variant="h2">howdy</Typography>
+    </Grid>
   );
 };
 
