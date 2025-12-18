@@ -24,13 +24,9 @@ const Header = () => {
   };
 
   return (
-    <Navbar className="max-h-20 p-2 shadow-sm">
-      <NavbarBrand className="">
-        <Button
-          isIconOnly
-          variant="light"
-          onPress={() => handleOpen()}
-        >
+    <Navbar className="max-h-20 p-2 shadow-sm flex">
+      <NavbarBrand className="flex justify-start">
+        <Button isIconOnly variant="light" onPress={() => handleOpen()}>
           <MenuIcon fontSize="large" />
         </Button>
       </NavbarBrand>
@@ -61,14 +57,13 @@ const Header = () => {
         </DrawerContent>
       </Drawer>
 
-      <NavbarContent>
-        <NavbarItem>
+      <NavbarContent className="flex flex-1 justify-center items-center min-w-fit">
+        <div className="flex flex-row items-center gap-4">
           <img src={logo} alt="Logo" className="h-10" />
-        </NavbarItem>
-        <NavbarItem>
           <h1 className="font-extrabold text-3xl">Hayden Lyle</h1>
-        </NavbarItem>
+        </div>
       </NavbarContent>
+      <NavbarContent />
     </Navbar>
   );
 };
