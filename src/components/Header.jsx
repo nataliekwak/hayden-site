@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Divider,
@@ -17,6 +18,7 @@ import logo from "../assets/stick_head.PNG";
 
 const Header = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const navigate = useNavigate();
 
   const handleOpen = () => {
     onOpen();
@@ -42,6 +44,7 @@ const Header = () => {
               size="large"
               variant="light"
               className="flex self-start gap-3 ml-3 font-semibold text-xl"
+              onPress={() => navigate("/")}
             >
               Home
             </Button>
@@ -51,6 +54,7 @@ const Header = () => {
               size="large"
               variant="light"
               className="flex self-start gap-3 ml-3 font-semibold text-xl"
+              onPress={() => navigate("/portfolio")}
             >
               Portfolio
             </Button>
@@ -60,6 +64,7 @@ const Header = () => {
               size="large"
               variant="light"
               className="flex self-start gap-3 ml-3 font-semibold text-xl"
+              onPress={() => navigate("/resume")}
             >
               Resume
             </Button>
