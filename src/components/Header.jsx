@@ -1,12 +1,11 @@
 import {
   Button,
-  ButtonGroup,
+  Divider,
   Drawer,
   DrawerContent,
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
   useDisclosure,
 } from "@heroui/react";
 import HomeIcon from "@mui/icons-material/Home";
@@ -37,23 +36,34 @@ const Header = () => {
         className="max-w-62.5"
       >
         <DrawerContent>
-          <ButtonGroup>
-            <Button startIcon={<HomeIcon />} size="large">
+          <div className="flex flex-col gap-5 p-4 mt-10">
+            <Button
+              startContent={<HomeIcon size={32} />}
+              size="large"
+              variant="light"
+              className="flex self-start gap-3 ml-3 font-semibold text-xl"
+            >
               Home
             </Button>
+            <Divider />
             <Button
-              startIcon={<WorkIcon />}
-              sx={{ justifyContent: "flex-start" }}
+              startContent={<WorkIcon size={32} />}
+              size="large"
+              variant="light"
+              className="flex self-start gap-3 ml-3 font-semibold text-xl"
             >
               Portfolio
             </Button>
+            <Divider />
             <Button
-              startIcon={<StickyNote2Icon />}
-              sx={{ justifyContent: "flex-start" }}
+              startContent={<StickyNote2Icon size={32} />}
+              size="large"
+              variant="light"
+              className="flex self-start gap-3 ml-3 font-semibold text-xl"
             >
               Resume
             </Button>
-          </ButtonGroup>
+          </div>
         </DrawerContent>
       </Drawer>
 
